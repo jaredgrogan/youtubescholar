@@ -1,0 +1,37 @@
+#VertexRAG
+
+from google.cloud import aiplatform
+
+def process_text(text):
+    aiplatform.init(project="YOUR_PROJECT_ID")
+    endpoint = aiplatform.Endpoint("YOUR_ENDPOINT_ID")
+    response = endpoint.predict(instances=[text])
+    return response.predictions[0]
+
+  import pinecone
+
+def index_text(text, video_id):
+    pinecone.init(api_key="YOUR_API_KEY", environment="YOUR_ENVIRONMENT")
+    index = pinecone.Index("ytubescholar")
+    vector = process_text(text)  # Use Google Vertex AI to get vector
+    index.upsert([(video_id, vector, {"text": text})])
+
+    from langchain.vectorstores import Pinecone
+from langchain.embeddings import VertexAIEmbeddings
+from langchain.llms import VertexAI
+from langchain.chains import RetrievalQA
+
+def setup_langchain():
+    embeddings = VertexAIEmbeddings()
+    vectorstore = Pinecone.from_existing_index("ytubescholar", embeddings)
+    llm = VertexAI()
+    qa_chain = RetrievalQA.from_chain_type(
+        llm=llm,
+        chain_type="stuff",
+        retriever=vectorstore.as_retriever()
+    )
+    return qa_chain
+
+  def query_rag(query, qa_chain):
+    response = qa_chain({"query": query})
+    return response["result"]
