@@ -1,0 +1,13 @@
+#YouTube Scraper 
+from googleapiclient.discovery import build
+
+def search_youtube(query, max_results=10):
+    youtube = build('youtube', 'v3', developerKey='YOUR_API_KEY')
+    request = youtube.search().list(
+        q=query,
+        type='video',
+        part='id,snippet',
+        maxResults=max_results
+    )
+    response = request.execute()
+    return response['items']
