@@ -1,5 +1,5 @@
-# youtubescholar
-YouTube Research Tool
+#YTScholar
+Web Video Research Tool
 
 YouTubeScholar is an advanced RAG-based agent designed to ingest audio from YouTube videos, process the content, and provide educational responses on specific topics. This tool leverages the power of Google Vertex AI, Whisper, Pinecone, and LangChain to create a comprehensive learning experience.
 
