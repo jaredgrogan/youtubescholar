@@ -1,7 +1,7 @@
 #YTScholar
 Web Video Research Tool
 
-YTScholar is an advanced RAG-based agent designed to ingest audio from web and YouTube videos, process the content, and provide educational responses on specific topics. This tool leverages the power of Google Vertex AI, Whisper, Pinecone, and LangChain to create a comprehensive learning experience.
+YTScholar is an advanced RAG-based agent designed to ingest audio from web and YouTube videos, process the content, and provide educational responses on specific topics for users. This tool leverages the combined power of Google Vertex AI and Whisper using LangChain and Pinecone dataabases to create a comprehensive learning experience.
 
 ## Agent Features
 
