@@ -1,4 +1,4 @@
-#YouTube Scraper 
+#YT Scraper 
 from googleapiclient.discovery import build
 
 def search_youtube(query, max_results=10):
