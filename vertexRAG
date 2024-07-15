@@ -1,4 +1,4 @@
-#VertexRAG
+#Vertex Retrieval Augmented Generation - RAG Engine
 
 from google.cloud import aiplatform
 
