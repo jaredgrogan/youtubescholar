@@ -14,7 +14,7 @@ def extract_audio(video_id):
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         ydl.download([f'https://www.youtube.com/watch?v={video_id}'])
 
-import whisper
+import whisper // OpenAI audio to text
 
 def transcribe_audio(audio_file):
     model = whisper.load_model("base")
