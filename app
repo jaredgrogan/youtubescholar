@@ -1,4 +1,5 @@
-#App
+#App // React
+
 async function searchTopic() {
     const topic = document.getElementById('topic').value;
     const response = await fetch('/api/search', {
