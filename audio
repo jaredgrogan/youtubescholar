@@ -1,4 +1,4 @@
-#AudioExtracter and Transcription // from Video (source YT)
+#AudioExtracter and Transcription // from Video (source YT) - Audio to Text
 import youtube_dl
 
 def extract_audio(video_id):
