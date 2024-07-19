@@ -1,4 +1,4 @@
-#Gemini Retrieval Augmented Generation - RAG Engine // GCP
+#Gemini Retrieval Augmented Generation - RAG Engine // GCP not vertex
 
 from google.cloud import aiplatform
 
