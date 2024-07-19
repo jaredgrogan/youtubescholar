@@ -1,4 +1,4 @@
-#App // React
+#App // React.js App
 
 async function searchTopic() {
     const topic = document.getElementById('topic').value;
