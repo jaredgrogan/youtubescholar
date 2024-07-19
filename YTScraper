@@ -1,4 +1,4 @@
-#YT Scraper 
+#YT Scraper // ingest data for audio to text --> Whisper (OpenAI API)
 from googleapiclient.discovery import build
 
 def search_youtube(query, max_results=10):
