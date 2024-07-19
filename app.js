@@ -1,4 +1,4 @@
-#App
+#App // YT Scraper App
 async function searchTopic() {
     const topic = document.getElementById('topic').value;
     const response = await fetch('/api/search', {
